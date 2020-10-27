@@ -65,8 +65,18 @@ body {
     position: relative;
 }
 
-.gradient:hover {
+.gradient:hover:before {
     cursor: default;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(98, 69, 138, 1) 20%, rgba(176, 124, 247, 1) 40%, rgba(176, 124, 247, 1) 100%);
+    z-index: 1;
 }
 
 .gradient:after {
@@ -94,6 +104,7 @@ body {
     position: relative;
     top: -285px;
     left: 30px;
+    z-index: 2;
 }
 
 .content_date span {
@@ -108,6 +119,7 @@ body {
     color: #ffffff;
     top: -180px;
     left: 20px;
+    z-index: 2;
 }
 
 .content_text_small {
@@ -117,6 +129,7 @@ body {
     color: #ffffff;
     top: -155px;
     left: 20px;
+    z-index: 2;
 }
 
 .button {
@@ -130,7 +143,7 @@ button {
     background-color: #f72b3b;
     border: none;
     font-family: 'Raleway-Light';
-    font-size: 20pt;
+    font-size: 17pt;
     color: #ffffff;
 }
 
@@ -139,5 +152,3 @@ button:hover {
     color: black;
     box-shadow: 1px 1px 0px 1px black;
 }
-
-button:active {}
